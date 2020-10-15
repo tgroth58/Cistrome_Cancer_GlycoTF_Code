@@ -22,6 +22,14 @@ TF_REACTOME_ENRICHMENT
 	Output from this script will be written into "TF_signaling_enrichment_results"
 
 TF_GLYCOGENE_NETWORKS
+	generate_bipartite_networks.R: parses cancer-specific TF-glycogene relationships, and generates bipartite networks using the igraph package.  Fast greedy community detection is then employed on the TF bipartite graph projection to discover communities.  If communities have more than 5 nodes, glycosylation pathway enrichment and TF signal pathway enrichment using the Reactome API are conducted and saved as results in an R list.
+	get_reactome_table.R: Constructs the Reactome API call using the list of TFs enriched to a particular glycosylation pathway.
+	hyper_geo_test_tfList.R: Given a set of TF-glycogene relationships for a cancer type, it constructs a contingency matrix to determine if a SET of TF disproportionately regulates a glycosylation pathway.
+	
+	Example usage form command line:
+	Rscript generate_bipartite_graph.R BRCA_1
+	
+	Output from this script will be written to "TF_glycogene_grpahTables" which stores graph information in tabular outpu, as well as "TF_glycogene_graphs", which stores the graph structures as igraph objects, and stores glycosylation patwhay and TF signaling pathway enrichments.
 	
 TF_RRA_TESTING:
 	RRA_testing.R: Reads the agglomerated TF-glycosylation pathway results computed across all cancer types and performs robust rank aggregation to find TFs that pervasively regulate 	
