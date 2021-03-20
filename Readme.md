@@ -1,4 +1,4 @@
-# Repository for: "A systems based framework to deduce transcription factors and signaling pathways regulating glycan biosynthesis"
+# Repository for: "A systems based framework to computationally describe putative transcription factors and signaling pathways regulating glycan biosynthesis"
 
 Please follow the [link]() to the manuscript.
 
