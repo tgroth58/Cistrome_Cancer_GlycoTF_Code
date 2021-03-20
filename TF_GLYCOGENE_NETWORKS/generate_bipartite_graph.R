@@ -1,9 +1,9 @@
 library(dplyr)
 library(tidyr)
 library(igraph)
-load('../data/processed/merge_data_glycogenes_V2.rda')
+load('../data/processed/merge_data_glycogenes.rda')
 load('../data/Glycogene_list.rda')
-load('../data/pathLists_V2.rda')
+load('../data/pathLists.rda')
 source('./get_reactome_table.R')
 source('./hyper_geo_test_tfList.R')
 

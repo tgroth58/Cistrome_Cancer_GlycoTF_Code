@@ -6,7 +6,7 @@ args=commandArgs(trailingOnly=T)
 ctype_enrichData=args[1]
 #Load the TF-glycosylation pathway data.  Loaded as "ctype_res_dta"
 # loaded from the TF_GLYCOPATH_ENRICHMENT/TF_glycopath_enrichment_results directory:
-f_path='../TF_GLYCOPATH_ENRICHMENT/TF_glycopath_newLists_results_V2'
+f_path='../TF_GLYCOPATH_ENRICHMENT/TF_glycopath_enrichment_results'
 load(file.path(f_path,paste(ctype_enrichData,'_pathway_enrich_RP_cor.rda',sep='')))
 prefix=unlist(strsplit(split='_pathway_enrich_RP_cor.rda',x=ctype_enrichData))[1]
 
