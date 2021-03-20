@@ -35,7 +35,7 @@ Output from this script will be written into "TF_signaling_enrichment_results"
 * *get_reactome_table.R*: Constructs the Reactome API call using the list of TFs enriched to a particular glycosylation pathway.
 	hyper_geo_test_tfList.R: Given a set of TF-glycogene relationships for a cancer type, it constructs a contingency matrix to determine if a SET of TF disproportionately regulates a glycosylation pathway.
 	
-Example usage form command line:
+#### Example usage form command line:
 ```
 Rscript generate_bipartite_graph.R BRCA_1
 ```
