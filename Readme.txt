@@ -4,7 +4,7 @@ Code for the manuscript:
 Directory Descriptions:
 
 TF_GLYCOPATHWAY_ENRICHMENT:
-	TF_glycoPathway_enrichment.R: Computed Fisher's exact test p-values for TF-glycosylation pathway relationships present in a cancer type.  The script takes the name of a TCGA cancer analyzed in this work as an argument.  All TCGA cancer types are available in the "cancer_types.tsv" file in the "data" folder of this repository
+	TF_glycoPathway_enrichment.R: Computed Fisher's exact test p-values (with Benjamini Hochberg correction) for TF-glycosylation pathway relationships for a cancer type.  The script takes the name of a TCGA cancer analyzed in this work as an argument.  All TCGA cancer types are available in the "cancer_types.tsv" file in the "data" folder of this repository
 	hyper_geo_test_single.R: Given a set of TF-glycogene relationships a cancer type, it constructs a contingency matrix to determine if a TF disproportionately regulates a glycosylation pathway.
 
 	Example Usage from command line:
@@ -30,6 +30,3 @@ TF_GLYCOGENE_NETWORKS
 	Rscript generate_bipartite_graph.R BRCA_1
 	
 	Output from this script will be written to "TF_glycogene_grpahTables" which stores graph information in tabular outpu, as well as "TF_glycogene_graphs", which stores the graph structures as igraph objects, and stores glycosylation patwhay and TF signaling pathway enrichments.
-	
-TF_RRA_TESTING:
-	RRA_testing.R: Reads the agglomerated TF-glycosylation pathway results computed across all cancer types and performs robust rank aggregation to find TFs that pervasively regulate 	
