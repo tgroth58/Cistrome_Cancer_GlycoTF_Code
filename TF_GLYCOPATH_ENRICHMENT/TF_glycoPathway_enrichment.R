@@ -29,4 +29,4 @@ save(file=file.path('./TF_glycopath_enrichment_results',paste(ctype_input,'pathw
 
 #Parse and save corrected data:
 ctype_res_dta_corrected<- as.data.frame(lapply(ctype_res,function(x) x[['enrichments_corrected']])) %>% mutate(glycoPath=row.names(.)) %>% pivot_longer(cols=colnames(.)[colnames(.)!='glycoPath']) %>% rename(TF=name,pEnrich=value) %>% group_by(glycoPath)
-save(file=file.path('./TF_glycopath_enrichment_results',paste(ctype_input,'pathway_enrich_RP_cor_adj.rda',sep='_')),ctype_res_dta)
+save(file=file.path('./TF_glycopath_enrichment_results',paste(ctype_input,'pathway_enrich_RP_cor_adj.rda',sep='_')),ctype_res_dta_corrected)
