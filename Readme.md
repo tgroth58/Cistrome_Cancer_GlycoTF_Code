@@ -1,6 +1,6 @@
 # Repository for: "A systems based framework to computationally describe putative transcription factors and signaling pathways regulating glycan biosynthesis"
 
-Please follow the [link]() to the manuscript.
+Please follow the [link](https://www.beilstein-journals.org/bjoc/articles/17/119) to the manuscript.
 
 ## File Descriptions:
 
